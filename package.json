@@ -1,0 +1,77 @@
+{
+  "name": "@yoseph_23/implannotator",
+  "version": "0.1.0",
+  "description": "Approval-gated frontend implementation for Pi, combining Implannotator design guidance with Plannotator reviews.",
+  "type": "module",
+  "license": "MIT",
+  "author": "yoseph_23",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosefdot/implannotator.git"
+  },
+  "homepage": "https://github.com/yosefdot/implannotator#readme",
+  "bugs": {
+    "url": "https://github.com/yosefdot/implannotator/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "frontend",
+    "design",
+    "approval",
+    "plannotator",
+    "code-review"
+  ],
+  "files": [
+    "extensions",
+    "skills",
+    "schemas",
+    "scripts",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "pi": {
+    "extensions": [
+      "extensions/index.ts",
+      "node_modules/@plannotator/pi-extension"
+    ],
+    "skills": [
+      "skills/implannotator"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint extensions tests scripts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:compat": "node scripts/check-plannotator-compat.mjs",
+    "verify:snapshot": "node scripts/verify-implannotator-snapshot.mjs",
+    "verify": "npm run verify:snapshot && npm run typecheck && npm run lint && npm test",
+    "update-check": "node scripts/update-check.mjs",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm run verify && node scripts/assert-publish-ready.mjs"
+  },
+  "dependencies": {
+    "@plannotator/pi-extension": "^0.23.1"
+  },
+  "bundledDependencies": [
+    "@plannotator/pi-extension"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": ">=0.80.7"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^0.80.7",
+    "@earendil-works/pi-coding-agent": "^0.80.7",
+    "@types/node": "^24.0.0",
+    "oxlint": "^1.50.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

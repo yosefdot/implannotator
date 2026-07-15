@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yosefdot/implannotator/schemas/qa-report.schema.json",
+  "title": "Implannotator QA report",
+  "type": "object",
+  "required": ["schemaVersion", "profile", "createdAt", "checks", "blockingFailures"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "profile": { "enum": ["quick", "standard", "full"] },
+    "checks": { "type": "array" },
+    "blockingFailures": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

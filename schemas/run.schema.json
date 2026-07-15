@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yosefdot/implannotator/schemas/run.schema.json",
+  "title": "Implannotator run",
+  "type": "object",
+  "required": ["schemaVersion", "id", "cwd", "command", "risk", "phase", "createdAt", "updatedAt", "repairCount", "qaProfile", "changedFiles", "decisions", "reviews"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-zA-Z0-9_-]+$" },
+    "cwd": { "type": "string" },
+    "phase": { "enum": ["inspecting", "planning", "awaiting-plan-review", "awaiting-text-approval", "approved", "implementing", "qa", "initial-review", "repairing", "final-review", "complete", "stopped", "failed"] },
+    "repairCount": { "type": "integer", "minimum": 0, "maximum": 3 }
+  },
+  "additionalProperties": true
+}
