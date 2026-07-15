@@ -2,7 +2,7 @@
 
 ## Plannotator
 
-Implannotator interoperates with and bundles `@plannotator/pi-extension`, licensed under MIT OR Apache-2.0. See <https://github.com/backnotprop/plannotator>.
+Implannotator interoperates with the separately installed `@plannotator/pi-extension` companion package, licensed under MIT OR Apache-2.0. See <https://github.com/backnotprop/plannotator>.
 
 ## Implannotator design-guidance snapshot
 

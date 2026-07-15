@@ -1,6 +1,6 @@
 {
   "name": "@yoseph_23/implannotator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Approval-gated frontend implementation for Pi, combining Implannotator design guidance with Plannotator reviews.",
   "type": "module",
   "license": "MIT",
@@ -34,12 +34,14 @@
   ],
   "pi": {
     "extensions": [
-      "extensions/index.ts",
-      "node_modules/@plannotator/pi-extension"
+      "extensions/index.ts"
     ],
     "skills": [
       "skills/implannotator"
     ]
+  },
+  "implannotator": {
+    "plannotatorCompanion": "^0.23.1"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
@@ -53,18 +55,13 @@
     "pack:check": "npm pack --dry-run",
     "prepublishOnly": "npm run verify && node scripts/assert-publish-ready.mjs"
   },
-  "dependencies": {
-    "@plannotator/pi-extension": "^0.23.1"
-  },
-  "bundledDependencies": [
-    "@plannotator/pi-extension"
-  ],
   "peerDependencies": {
     "@earendil-works/pi-ai": "*",
     "@earendil-works/pi-coding-agent": ">=0.80.7"
   },
   "devDependencies": {
     "@earendil-works/pi-ai": "^0.80.7",
+    "@plannotator/pi-extension": "^0.23.1",
     "@earendil-works/pi-coding-agent": "^0.80.7",
     "@types/node": "^24.0.0",
     "oxlint": "^1.50.0",

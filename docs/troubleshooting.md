@@ -4,9 +4,9 @@
 
 Implannotator returns a text-review request. Present the plan or diff evidence in chat and record the explicit decision. Low-risk continuation is not automatic unless enabled.
 
-## Duplicate browser tabs
+## Plannotator companion not active
 
-A standalone Plannotator package and Implannotator's bundled Plannotator may both be loaded. Disable the standalone package entry for this session/project.
+Install or enable the companion with `pi install npm:@plannotator/pi-extension`, then restart Pi or run `/reload`. Implannotator 0.1.1 and newer do not bundle a second copy; older Implannotator 0.1.0 should be upgraded to avoid duplicate registration conflicts.
 
 ## Run interrupted
 

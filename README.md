@@ -2,15 +2,23 @@
 
 `@yoseph_23/implannotator` is a cross-platform Pi package for production-grade frontend work with mandatory plan approval, adaptive browser QA, Plannotator code review, bounded repairs, and resumable audit records.
 
-## Status
+## Installation
 
-Early development release. Public publishing is intentionally blocked until redistribution rights for the adapted design-guidance snapshot are confirmed.
+Plannotator is a companion Pi package. Install it once, then install Implannotator:
 
-## Install locally
+```bash
+pi install npm:@plannotator/pi-extension
+pi install npm:@yoseph_23/implannotator
+```
+
+Implannotator reuses the active companion through Plannotator's public event API; it does not bundle or register a second Plannotator extension. If the companion is unavailable, mandatory text approval remains available.
+
+For local development:
 
 ```bash
 cd <path-to-repository>/implannotator
 npm install
+pi install npm:@plannotator/pi-extension
 pi install .
 ```
 
@@ -65,4 +73,4 @@ npm run verify:snapshot
 npm run pack:check
 ```
 
-See [docs/architecture.md](docs/architecture.md), [docs/workflow.md](docs/workflow.md), [docs/qa.md](docs/qa.md), and [docs/security.md](docs/security.md).
+See [docs/installation.md](docs/installation.md), [docs/architecture.md](docs/architecture.md), [docs/workflow.md](docs/workflow.md), [docs/qa.md](docs/qa.md), and [docs/security.md](docs/security.md).
