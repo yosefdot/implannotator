@@ -8,7 +8,8 @@ const manifest = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8"))
 
 describe("Pi package manifest", () => {
   it("loads only the Implannotator extension", () => {
-    expect(manifest.version).toBe("0.1.1");
+    expect(manifest.name).toBe("implannotator");
+    expect(manifest.version).toBe("0.2.0");
     expect(manifest.pi.extensions).toEqual(["extensions/index.ts"]);
     expect(manifest.pi.skills).toEqual(["skills/implannotator"]);
   });
@@ -17,5 +18,6 @@ describe("Pi package manifest", () => {
     expect(manifest.dependencies?.["@plannotator/pi-extension"]).toBeUndefined();
     expect(manifest.bundledDependencies).toBeUndefined();
     expect(manifest.implannotator.plannotatorCompanion).toBe("^0.23.1");
+    expect(manifest.keywords).toEqual(expect.arrayContaining(["pi-package", "pi", "extension", "skill"]));
   });
 });

@@ -1,6 +1,6 @@
 # Implannotator
 
-`@yoseph_23/implannotator` is a cross-platform Pi package for production-grade frontend work with mandatory plan approval, adaptive browser QA, Plannotator code review, bounded repairs, and resumable audit records.
+`implannotator` is a cross-platform Pi package for production-grade frontend work with mandatory plan approval, adaptive browser QA, Plannotator code review, bounded repairs, and resumable audit records.
 
 ## Installation
 
@@ -8,7 +8,7 @@ Plannotator is a companion Pi package. Install it once, then install Implannotat
 
 ```bash
 pi install npm:@plannotator/pi-extension
-pi install npm:@yoseph_23/implannotator
+pi install npm:implannotator
 ```
 
 Implannotator reuses the active companion through Plannotator's public event API; it does not bundle or register a second Plannotator extension. If the companion is unavailable, mandatory text approval remains available.

@@ -1,6 +1,6 @@
 {
-  "name": "@yoseph_23/implannotator",
-  "version": "0.1.1",
+  "name": "implannotator",
+  "version": "0.2.0",
   "description": "Approval-gated frontend implementation for Pi, combining Implannotator design guidance with Plannotator reviews.",
   "type": "module",
   "license": "MIT",
@@ -15,6 +15,9 @@
   },
   "keywords": [
     "pi-package",
+    "pi",
+    "extension",
+    "skill",
     "frontend",
     "design",
     "approval",
