@@ -63,12 +63,12 @@
     "@earendil-works/pi-coding-agent": ">=0.80.7"
   },
   "devDependencies": {
-    "@earendil-works/pi-ai": "^0.80.7",
-    "@plannotator/pi-extension": "^0.23.1",
-    "@earendil-works/pi-coding-agent": "^0.80.7",
-    "@types/node": "^24.0.0",
+    "@earendil-works/pi-ai": "^0.81.1",
+    "@plannotator/pi-extension": "^0.24.2",
+    "@earendil-works/pi-coding-agent": "^0.81.1",
+    "@types/node": "^26.1.1",
     "oxlint": "^1.50.0",
-    "typescript": "^5.9.0",
+    "typescript": "^7.0.2",
     "vitest": "^4.0.0"
   },
   "engines": {
